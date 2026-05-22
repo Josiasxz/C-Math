@@ -6,7 +6,7 @@
 #include "math/basic/num&prop.h"
 #include "controller/num&prop-controller.h"
 
-#define NUMPROP_OPTIONS 3
+#define NUMPROP_OPTIONS 4
 #define MAX_CHAR 100
 
 bool numPropOperations(void)
@@ -23,7 +23,7 @@ bool numPropOperations(void)
         {
             case 1:
             {
-                int num = getNumber("Digite um número: ");
+                const int num = getNumber("Digite um número: ");
 
                 if (isEven(num))
                     printf("%i eh par\n", num);
@@ -35,7 +35,7 @@ bool numPropOperations(void)
 
             case 2:
             {
-                int num = getNumber("Digite um número: ");
+                const int num = getNumber("Digite um número: ");
 
                 if (num < 0)
                 {
@@ -53,11 +53,11 @@ bool numPropOperations(void)
 
             case 3:
             {
-                int num = (int)getNumber("Digite um número: ");
+                const int num = (int)getNumber("Digite um número: ");
 
                 int list[MAX_CHAR];
 
-                int count = listOfDivisors(list, num);
+                const int count = listOfDivisors(list, num);
 
                 printf("Divisores: ");
 
@@ -72,7 +72,17 @@ bool numPropOperations(void)
                 printf("\n");
 
                 break;
-}   
+            }   
+
+            case 4:
+            {
+                const int num = getNumber("Digite um número: ");
+                const int qtdDivisors = numberOfDivisors(num);
+
+                printf("O número de divisores é: %i", qtdDivisors);
+                break;
+            }
+
             default:
             {
                 printf("Opção inválida!\n");
