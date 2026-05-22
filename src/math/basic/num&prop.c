@@ -24,22 +24,18 @@ bool isPrime(const int num)
     return true;
 }
 
-bool listOfDivisors (int *list[], const int num)
+int listOfDivisors(int list[], const int num)
 {
-    if (list == NULL)
-        return false;
-
-    *list[0] = 1;
-
     int count = 0;
-    for (int i = 2; i < (num / 2); i++)
+
+    for (int i = 1; i <= num; i++)
     {
         if (num % i == 0)
         {
-            *list[i - 1] = i;
+            list[count] = i;
             count++;
         }
     }
 
-    list[count] = num;
+    return count;
 }

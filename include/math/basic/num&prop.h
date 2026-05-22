@@ -5,6 +5,6 @@
 
 bool isEven (const int num);
 bool isPrime (const int num);
-bool listOfDivisors (int *list[], const int num);
+int listOfDivisors(int list[], const int num);
 
 #endif

@@ -7,6 +7,7 @@
 #include "controller/num&prop-controller.h"
 
 #define NUMPROP_OPTIONS 3
+#define MAX_CHAR 100
 
 bool numPropOperations(void)
 {
@@ -50,6 +51,28 @@ bool numPropOperations(void)
                 break;
             }
 
+            case 3:
+            {
+                int num = (int)getNumber("Digite um número: ");
+
+                int list[MAX_CHAR];
+
+                int count = listOfDivisors(list, num);
+
+                printf("Divisores: ");
+
+                for (int i = 0; i < count; i++)
+                {
+                    if (i < count - 1)
+                        printf("%d, ", list[i]);
+                    else
+                        printf("%d", list[i]);
+                }
+
+                printf("\n");
+
+                break;
+}   
             default:
             {
                 printf("Opção inválida!\n");

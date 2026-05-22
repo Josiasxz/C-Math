@@ -73,6 +73,7 @@ void showNumProp(void)
     printf("\n");
     printf("1 - Ímpar ou par\n");
     printf("2 - Número primo\n");
+    printf("3 - Lista de divisores\n");
     printf("0 - Voltar");
     printf("\n");
     printf("---------------------------------\n");
