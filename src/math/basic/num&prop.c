@@ -23,3 +23,23 @@ bool isPrime(const int num)
 
     return true;
 }
+
+bool listOfDivisors (int *list[], const int num)
+{
+    if (list == NULL)
+        return false;
+
+    *list[0] = 1;
+
+    int count = 0;
+    for (int i = 2; i < (num / 2); i++)
+    {
+        if (num % i == 0)
+        {
+            *list[i - 1] = i;
+            count++;
+        }
+    }
+
+    list[count] = num;
+}

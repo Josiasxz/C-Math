@@ -6,7 +6,7 @@
 #include "math/basic/num&prop.h"
 #include "controller/num&prop-controller.h"
 
-#define NUMPROP_OPTIONS 2
+#define NUMPROP_OPTIONS 3
 
 bool numPropOperations(void)
 {
