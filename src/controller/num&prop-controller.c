@@ -79,7 +79,7 @@ bool numPropOperations(void)
                 const int num = getNumber("Digite um número: ");
                 const int qtdDivisors = numberOfDivisors(num);
 
-                printf("O número de divisores é: %i", qtdDivisors);
+                printf("O número de divisores é: %i\n", qtdDivisors);
                 break;
             }
 

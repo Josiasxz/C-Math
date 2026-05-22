@@ -43,7 +43,7 @@ int listOfDivisors(int list[], const int num)
 int numberOfDivisors(const int num)
 {
     int count = 1;
-    for (int i = 1; i < num / 2; i++)
+    for (int i = 1; i < num / 2 + 1; i++)
     {
         if (num % i == 0)
             count++;
