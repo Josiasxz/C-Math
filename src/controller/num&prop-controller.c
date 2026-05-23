@@ -6,7 +6,7 @@
 #include "math/basic/num&prop.h"
 #include "controller/num&prop-controller.h"
 
-#define NUMPROP_OPTIONS 4
+#define NUMPROP_OPTIONS 5
 #define MAX_CHAR 100
 
 bool numPropOperations(void)
@@ -80,6 +80,15 @@ bool numPropOperations(void)
                 const int qtdDivisors = numberOfDivisors(num);
 
                 printf("O número de divisores é: %i\n", qtdDivisors);
+                break;
+            }
+
+            case 5: 
+            {
+                const int num = getNumber("Digite um número: ");
+                const int sum = sumOfDigits(num);
+
+                printf("A soma dos dígitos é: %i\n", sum);
                 break;
             }
 
