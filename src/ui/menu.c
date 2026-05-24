@@ -76,6 +76,7 @@ void showNumProp(void)
     printf("3 - Lista de divisores\n");
     printf("4 - Quantidade de divisores\n");
     printf("5 - Soma dos dígitos\n");
+    printf("6 - Reverso do número\n");
     printf("0 - Voltar");
     printf("\n");
     printf("---------------------------------\n");
