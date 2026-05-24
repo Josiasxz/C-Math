@@ -8,5 +8,6 @@ bool isPrime (const int num);
 int listOfDivisors (int list[], const int num);
 int numberOfDivisors (const int num);
 int sumOfDigits (int num);
+int reverseOfNumber(const int num);
 
 #endif

@@ -4,6 +4,8 @@
 #include "math/basic/arithmetic.h"
 #include "math/basic/num&prop.h"
 
+#define MAX_CHAR 20
+
 bool isEven (const int num)
 {
     if (num % 2 == 0) return true;
@@ -66,4 +68,25 @@ int sumOfDigits(int num)
     }
 
     return sum;
+}
+
+int reverseOfNumber(const int num)
+{
+    int copyNum = num;
+
+    if (num < 0)
+        copyNum *= -1;
+    
+    int reverse = 0;
+    while (copyNum > 0)
+    {
+        int rest = copyNum % 10;
+        reverse = reverse * 10 + rest;
+        copyNum /= 10;
+    }
+
+    if (num < 0)
+        reverse *= -1;
+
+    return reverse;
 }

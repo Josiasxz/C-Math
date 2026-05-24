@@ -6,7 +6,7 @@
 #include "math/basic/num&prop.h"
 #include "controller/num&prop-controller.h"
 
-#define NUMPROP_OPTIONS 5
+#define NUMPROP_OPTIONS 6
 #define MAX_CHAR 100
 
 bool numPropOperations(void)
@@ -89,6 +89,15 @@ bool numPropOperations(void)
                 const int sum = sumOfDigits(num);
 
                 printf("A soma dos dígitos é: %i\n", sum);
+                break;
+            }
+
+            case 6: 
+            {
+                const int num = getNumber("Digite um número: ");
+                const int reverse = reverseOfNumber(num);
+
+                printf("O reverso do número é: %i\n", reverse);
                 break;
             }
 
